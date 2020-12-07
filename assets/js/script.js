@@ -263,7 +263,7 @@ $(window).load(function(){
         };
         if (btnstatut){
             btnstatut.forEach(function(element) {
-                $("#btn" + element).removeClass('pressed').attr('src', "/media/icones/" + element + "on.png");
+                $("#btn" + element).removeClass('pressed').attr('src', "media/icones/" + element + "on.png");
                 $('.' + element).show();
             });
         };
@@ -287,7 +287,7 @@ $(window).load(function(){
         mymap.zoomControl.setPosition('topright')
 
         var bounds = [[0,0], [2325,3886]];
-        var image = L.imageOverlay('/media/map-mondstadt.jpg', bounds).addTo(mymap);
+        var image = L.imageOverlay('media/map-mondstadt.jpg', bounds).addTo(mymap);
 
         mymap.fitBounds(bounds);
 
@@ -303,40 +303,40 @@ $(window).load(function(){
                 nfichier = filename + (i+1);
                 switch (mtype) {
                     case 0 : // Img
-                        L.marker(marq[1], {icon: markico, title: marktitle}).addTo(mymap).bindPopup(`<a href="/media/${nfichier}.jpg" data-lightbox="${nfichier}" data-title="${marktitle}"><img class="thumb" src="/media/${nfichier}.jpg"/></a>`, popupOptions);
+                        L.marker(marq[1], {icon: markico, title: marktitle}).addTo(mymap).bindPopup('<a href="media/'+nfichier+'.jpg" data-lightbox="'+nfichier+'" data-title="'+marktitle+'"><img class="thumb" src="media/'+nfichier+'.jpg"/></a>', popupOptions);
                         break;
                     case 1 : // Img + cb
-                        listback.push(L.marker(marq[1], {icon: markico, title: marktitle}).addTo(mymap).on('click', onMarkerClick).bindPopup(`<a href="/media/${nfichier}.jpg" data-lightbox="${nfichier}" data-title="${marktitle}"><img class="thumb" src="/media/${nfichier}.jpg"/></a><br><h2><input id="mapbox" name="${cbxname}" value="${i + 1}" type="checkbox" /> Trouvé</h2>`, popupOptions));
+                        listback.push(L.marker(marq[1], {icon: markico, title: marktitle}).addTo(mymap).on('click', onMarkerClick).bindPopup('<a href="media/'+nfichier+'.jpg" data-lightbox="'+nfichier+'" data-title="'+marktitle+'"><img class="thumb" src="media/'+nfichier+'.jpg"/></a><br><h2><input id="mapbox" name="'+cbxname+'" value="'+ (i+1)+'" type="checkbox" /> '+i18n['ui-found']+'</h2>', popupOptions));
                         break;
                     case 2 : // Img + txt
-                        L.marker(marq[1], {icon: markico, title: marktitle}).addTo(mymap).bindPopup(`<h1><a href="/media/${nfichier}.jpg" data-lightbox="${nfichier}" data-title="${marktitle}"><img class="thumb" src="/media/${nfichier}.jpg"/></a><br><br>${marq[2]}</h1>`, popupOptions);
+                        L.marker(marq[1], {icon: markico, title: marktitle}).addTo(mymap).bindPopup('<h1><a href="media/'+nfichier+'.jpg" data-lightbox="'+nfichier+'" data-title="'+marktitle+'"><img class="thumb" src="media/'+nfichier+'.jpg"/></a><br><br>'+marq[2]+'</h1>', popupOptions);
                         break;
                     case 3 : // Img + txt + cb
-                        listback.push(L.marker(marq[1], {icon: markico, title: marktitle}).addTo(mymap).on('click', onMarkerClick).bindPopup(`<h1><a href="/media/${nfichier}.jpg" data-lightbox="${nfichier}" data-title="${marktitle}"><img class="thumb" src="/media/${nfichier}.jpg"/></a><br><br>${marq[2]}<br><h2><input id="mapbox" name="${cbxname}" value="${i + 1}" type="checkbox" /> Trouvé</h2>`, popupOptions));
+                        listback.push(L.marker(marq[1], {icon: markico, title: marktitle}).addTo(mymap).on('click', onMarkerClick).bindPopup('<h1><a href="media/'+nfichier+'.jpg" data-lightbox="'+nfichier+'" data-title="'+marktitle+'"><img class="thumb" src="media/'+nfichier+'.jpg"/></a><br><br>'+marq[2]+'<br><h2><input id="mapbox" name="'+cbxname+'" value="'+ (i+1)+'" type="checkbox" /> '+i18n['ui-found']+'</h2>', popupOptions));
                         break;
                     case 4 : // Video ss txt
-                        L.marker(marq[1], {icon: markico, title: marktitle}).addTo(mymap).bindPopup(`<iframe width="560" height="315" src="//www.youtube.com/embed/${marq[2]}?rel=0" frameborder="0" allowfullscreen></iframe>`, popupOptions);
+                        L.marker(marq[1], {icon: markico, title: marktitle}).addTo(mymap).bindPopup('<iframe width="560" height="315" src="//www.youtube.com/embed/'+marq[2]+'?rel=0" frameborder="0" allowfullscreen></iframe>', popupOptions);
                         break;
                     case 5 : // Video ss txt + cb
-                        listback.push(L.marker(marq[1], {icon: markico, title: marktitle}).addTo(mymap).on('click', onMarkerClick).bindPopup(`<iframe width="560" height="315" src="//www.youtube.com/embed/${marq[2]}?rel=0" frameborder="0" allowfullscreen></iframe><br><h2><input id="mapbox" name="${cbxname}" value="${i + 1}" type="checkbox" /> Trouvé</h2>`, popupOptions));
+                        listback.push(L.marker(marq[1], {icon: markico, title: marktitle}).addTo(mymap).on('click', onMarkerClick).bindPopup('<iframe width="560" height="315" src="//www.youtube.com/embed/'+marq[2]+'?rel=0" frameborder="0" allowfullscreen></iframe><br><h2><input id="mapbox" name="'+cbxname+'" value="'+ (i+1)+'" type="checkbox" /> '+i18n['ui-found']+'</h2>', popupOptions));
                         break;
                     case 6 : // Video + txt
-                        L.marker(marq[1], {icon: markico, title: marktitle}).addTo(mymap).bindPopup(`<iframe width="560" height="315" src="//www.youtube.com/embed/${marq[2]}?rel=0" frameborder="0" allowfullscreen></iframe><br><h1>${marq[3]}</h1>`, popupOptions);
+                        L.marker(marq[1], {icon: markico, title: marktitle}).addTo(mymap).bindPopup('<iframe width="560" height="315" src="//www.youtube.com/embed/'+marq[2]+'?rel=0" frameborder="0" allowfullscreen></iframe><br><h1>'+marq[3]+'</h1>', popupOptions);
                         break;
                     case 7 : // Video + txt + cb
-                        listback.push(L.marker(marq[1], {icon: markico, title: marktitle}).addTo(mymap).on('click', onMarkerClick).bindPopup(`<iframe width="560" height="315" src="//www.youtube.com/embed/${marq[2]}?rel=0" frameborder="0" allowfullscreen></iframe><br><h1>${marq[3]}<br><h2><input id="mapbox" name="${cbxname}" value="${i + 1}" type="checkbox" /> Trouvé</h2></h1>`, popupOptions));
+                        listback.push(L.marker(marq[1], {icon: markico, title: marktitle}).addTo(mymap).on('click', onMarkerClick).bindPopup('<iframe width="560" height="315" src="//www.youtube.com/embed/'+marq[2]+'?rel=0" frameborder="0" allowfullscreen></iframe><br><h1>'+marq[3]+'<br><h2><input id="mapbox" name="'+cbxname+'" value="'+ (i+1)+'" type="checkbox" /> '+i18n['ui-found']+'</h2></h1>', popupOptions));
                         break;
                     case 8 : // txt
-                        L.marker(marq[1], {icon: markico, title: marktitle}).addTo(mymap).bindPopup(`<h1>${marq[2]}</h1>`, popupOptions);
+                        L.marker(marq[1], {icon: markico, title: marktitle}).addTo(mymap).bindPopup('<h1>'+marq[2]+'</h1>', popupOptions);
                         break;
                     case 9 : // txt + cb
-                        listback.push(L.marker(marq[1], {icon: markico, title: marktitle}).addTo(mymap).on('click', onMarkerClick).bindPopup(`<h1>${marq[2]}<br><h2><input id="mapbox" name="${cbxname}" value="${i + 1}" type="checkbox" /> Trouvé</h2></h1>`, popupOptions));
+                        listback.push(L.marker(marq[1], {icon: markico, title: marktitle}).addTo(mymap).on('click', onMarkerClick).bindPopup('<h1>'+marq[2]+'<br><h2><input id="mapbox" name="'+cbxname+'" value="'+ (i+1)+'" type="checkbox" /> '+i18n['ui-found']+'</h2></h1>', popupOptions));
                         break;
                     case 10 : // null
-                        L.marker(marq[1], {icon: Null, title: ""}).addTo(mymap).bindPopup(`<h1>${marq[2]}</h1>`, popupOptions);
+                        L.marker(marq[1], {icon: Null, title: ""}).addTo(mymap).bindPopup('<h1>'+marq[2]+'</h1>', popupOptions);
                         break;
                     case 11 : // null + cb
-                        listback.push(L.marker(marq[1], {icon: Null, title: ""}).addTo(mymap).on('click', onMarkerClick).bindPopup(`<h1>${marq[2]}<br><h2><input id="mapbox" name="${cbxname}" value="${i + 1}" type="checkbox" /> Trouvé</h2></h1>`, popupOptions));
+                        listback.push(L.marker(marq[1], {icon: Null, title: ""}).addTo(mymap).on('click', onMarkerClick).bindPopup('<h1>'+marq[2]+'<br><h2><input id="mapbox" name="'+cbxname+'" value="'+ (i+1) +'" type="checkbox" /> '+i18n['ui-found']+'</h2></h1>', popupOptions));
                         break;
                     case 12 : // sans popup
                         L.marker(marq[1], {icon: markico, title: marktitle}).addTo(mymap);
@@ -389,7 +389,7 @@ $(window).load(function(){
         loadmarker(listpapillon,Papillon,i18n.cat42,"","");
         loadmarker(listluciole,Luciole,i18n.cat43,"","");
         loadmarker(listnoyauc,Noyauc,i18n.cat44,"","");
-    
+
     // Succés
 
 	var markerssucces = [
@@ -399,11 +399,11 @@ $(window).load(function(){
         L.marker([ 604,3080], {icon: Succes, title: i18n['succes-004-title']}).addTo(mymap).on('click', onMarkerClick).bindPopup('<iframe width="560" height="315" src="//www.youtube.com/embed/bLlx2q5xJ_k?rel=0" frameborder="0" allowfullscreen></iframe><h1>'+i18n['succes-002-h1']+'</h1><h2><label><input id="mapbox" name="succes" value="4" type="checkbox" /> '+i18n['ui-found']+'</label></h2>', popupOptions),
         L.marker([1314,1260], {icon: Succes, title: i18n['succes-005-title']}).addTo(mymap).on('click', onMarkerClick).bindPopup('<iframe width="560" height="315" src="//www.youtube.com/embed/fzLJspb266A?rel=0" frameborder="0" allowfullscreen></iframe><h1>'+i18n['succes-005-h1']+'</h1><h2><label><input id="mapbox" name="succes" value="5" type="checkbox" /> '+i18n['ui-found']+'</label></h2>', popupOptions),
         L.marker([1711, 871], {icon: Succes, title: i18n['succes-006-title']}).addTo(mymap).on('click', onMarkerClick).bindPopup('<iframe width="560" height="315" src="//www.youtube.com/embed/pBKixxEk71c?rel=0" frameborder="0" allowfullscreen></iframe><h1>'+i18n['succes-006-h1']+'</h1><h2><label><input id="mapbox" name="succes" value="6" type="checkbox" /> '+i18n['ui-found']+'</label></h2>', popupOptions)
-    ];        
+    ];
         initmarker (markerssucces, "succes");
         nbtmark += markerssucces.length;
         console.log(i18n["ui-succes"] + markerssucces.length + i18n["ui-load"]);
-        
+
         if (localStorage.nbtliyue) {
             nbtmark += Number(localStorage.nbtliyue);
         } else {
@@ -415,7 +415,7 @@ $(window).load(function(){
         //	L.marker([ 100, 150], {icon: Credits, title: "Crédits et Remerciements"}).addTo(mymap).bindPopup('<p><h4>Crédits et Remerciements</h4></p><p align="center"><h3>Conception :</h3></p><p align="center">TMKFrench</p><h3>Screenshots et Vidéos :</h3><p align="center">TMKFrench<br>ManqueDeBol<br>AstamoranVoz<br>Tumay<br>SupremB4N4N4</p><h3>Contributeurs et Aide :</h3><p align="center">Ackile<br>Larolina<br>Conan<br>kerthe17</p>', popupOptions);
         L.marker([ 100, 150], {icon: Alire, title: "Notes Importantes"}).addTo(mymap).bindPopup('<h4>Notes Importantes</h4><br><h3>Utilisation du Stockage Local :</h3><p style="color : red;">Ce site utilise un système de Stockage Local pour sauvegarder<br>vos préférences et avancement sur la Map (Menu et marqueurs).<br>En aucun cas nous ne recupérons et stockons de données personnelles.<br>Les fonctions de Reset et d\'Import/export agissent sur<br>les 2 maps de Mondstadt ET Liyue !!!</p>', popupOptions);
         if (sessionStorage.languagemap == "fr") {
-                L.marker([  60,1943], {icon: Null, title: ""}).addTo(mymap).bindPopup('<h4><img src="/media/logo.jpg"/><br>TMKFrench - LGDC</h4><h3>NOUVEAU !!! Tous les Panoramas<br>Bienvenue sur notre Map interactive !</h3><p>Cliquez sur une icône de votre choix pour plus d\'info.<br>Utilisez la molette de la souris pour zoomer<br>et le menu pour afficher ou masquer les POIs.<br><a style="color:red;">Nombre de Marker : ' + nbtmark + '</a><br><br><a style="color : red;"><strong>Release V3.5 du 11/11/2020</strong></a><br>Rajout des marqueurs pour les matériaux de farm<br>Passage au Stockage local à la place des cookies<br>Mise en ligne de la map de Liyue.<br><br>Si vous voulez participer en m\'envoyant de nouveaux<br>emplacements, n\'hésitez pas à me contacter<br>par mail à infomap@tmkfrench.fr ou par<br>MP sur discord : TMKFrench#4221', {'minWidth': '640px','minHeight': '480px'}).openPopup();
+                L.marker([  60,1943], {icon: Null, title: ""}).addTo(mymap).bindPopup('<h4><img src="media/logo.jpg"/><br>TMKFrench - LGDC</h4><h3>NOUVEAU !!! Tous les Panoramas<br>Bienvenue sur notre Map interactive !</h3><p>Cliquez sur une icône de votre choix pour plus d\'info.<br>Utilisez la molette de la souris pour zoomer<br>et le menu pour afficher ou masquer les POIs.<br><a style="color:red;">Nombre de Marker : ' + nbtmark + '</a><br><br><a style="color : red;"><strong>Release V3.5 du 11/11/2020</strong></a><br>Rajout des marqueurs pour les matériaux de farm<br>Passage au Stockage local à la place des cookies<br>Mise en ligne de la map de Liyue.<br><br>Si vous voulez participer en m\'envoyant de nouveaux<br>emplacements, n\'hésitez pas à me contacter<br>par mail à infomap@tmkfrench.fr ou par<br>MP sur discord : TMKFrench#4221', {'minWidth': '640px','minHeight': '480px'}).openPopup();
             } else {
             	L.marker([  60,1943], {icon: Null, title: ""}).addTo(mymap).bindPopup('<h4><img src="media/logo.jpg"/><br>TMKFrench - LGDC</h4><h3>NEW !!! All Viewpoint<br>Welcome to our Interactive Map !</h3><p>Clic on a Marker of your choice for more information.<br>Use mouse wheel to zoom<br>and the menu to toggle POIs.<br><a style="color:red;">Marker\'s count : ' + nbtmark + '</a><br><br><a style="color : red;"><strong>Release V3.5 of 11/11/2020</strong></a><br>Adding Materials markers. Using local storage instead of cookies.<br>Liyue\'s Map is Online<br><br>If you want to participate, giving me new location on<br>map, feel free to contact me by mail<br>at infomap@tmkfrench.fr or by Discord PM : TMKFrench#4221', {'minWidth': '640px','minHeight': '480px'}).openPopup();
             };
@@ -467,10 +467,10 @@ $(window).load(function(){
         $('.matbtn').on('click', function() {
             var ndf = $(this).attr('value');
             if ($(this).hasClass('pressed')) {
-                $(this).attr('src', "/media/icones/" + ndf + "on.png");
+                $(this).attr('src', "media/icones/" + ndf + "on.png");
                 $(this).toggleClass('pressed');
             } else {
-                $(this).attr('src', "/media/icones/" + ndf + "off.png");
+                $(this).attr('src', "media/icones/" + ndf + "off.png");
                 $(this).toggleClass('pressed');
             };
             $('.' + ndf).toggle();

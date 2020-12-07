@@ -94,23 +94,23 @@ a:-any-link {
   color: #FF8000;
 }
 
-//#btnmenu {
-//  position: absolute;
-//  padding-top: 16px;
-//  cursor: pointer;
-//  z-index: 2;
-//  width: auto;
-//}
-//
-//#mapid {
-//  position: absolute;
-//  top: 80px;
-//  right: 0;
-//  bottom: 0;
-//  left: 50%;
-//  transform: translate(-50%, 0%);
-//  width: 100%;
-//}
+#btnmenu {
+  position: absolute;
+  padding-top: 16px;
+  cursor: pointer;
+  z-index: 2;
+  width: auto;
+}
+
+#mapid {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 100%;
+}
 
 #activation-select {
   position: relative;
@@ -254,7 +254,7 @@ $color: sandybrown;
 #btnmap {
   position: absolute;
   background-color: transparent;
-  background-image: url("https://genshin.tmkfrench.fr/media/bgbtnmap.png");
+  background-image: url("../../media/bgbtnmap.png");
   background-repeat: no-repeat;
   background-size: 140px 71px;
   width: 140px;
