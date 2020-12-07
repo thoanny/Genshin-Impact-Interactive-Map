@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'Candara';
-  src: url("https://genshin.tmkfrench.fr/ressources/candara.ttf") format("truetype")
+  src: url("../fonts/candara.ttf") format("truetype")
 }
 
 @font-face {
   font-family: 'NeoGrey';
-  src: url("https://genshin.tmkfrench.fr/ressources/neogreyregular.otf") format("truetype")
+  src: url("../fonts/neogreyregular.otf") format("truetype")
 }
 
 html, body {
@@ -13,14 +13,14 @@ html, body {
   margin: 0;
 }
 .leaflet-popup-content h1 {
-  font-family: 'Candara';
+  font-family: 'Candara', sans-serif;
   font-size: 12px;
   color: #000;
   white-space: nowrap;
 }
 
 .leaflet-popup-content h2 {
-  font-family: 'Candara';
+  font-family: 'Candara', sans-serif;
   font-size: 20px;
   font-weight: bold;
   color: #000;
@@ -28,7 +28,7 @@ html, body {
 }
 
 .leaflet-popup-content h3 {
-  font-family: 'Candara';
+  font-family: 'Candara', sans-serif;
   font-size: 20px;
   font-weight: bold;
   color: #bf4646;
@@ -37,7 +37,7 @@ html, body {
 }
 
 .leaflet-popup-content h4 {
-  font-family: 'Candara';
+  font-family: 'Candara', sans-serif;
   text-align: center;
   font-size: 28px;
   text-shadow: 3px 3px 4px rgb(151, 137, 128);
@@ -277,4 +277,3 @@ $color: sandybrown;
     }
   }
 }
-
