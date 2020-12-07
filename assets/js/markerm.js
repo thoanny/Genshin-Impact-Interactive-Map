@@ -1,42 +1,43 @@
 // Marqueurs de Mondstadt
 
+
 // Déclaration des types marqueurs
 
-var Teleport = L.icon({iconUrl:'/media/icones/teleport.png', className:'teleport', iconSize:[25, 40], iconAnchor:[12, 40], popupAnchor:[0, -40]});
-var Statue = L.icon({iconUrl:'/media/icones/statue.png', className:'statue', iconSize:[25, 40], iconAnchor:[12, 40], popupAnchor:[0, -40]});
-var Succes = L.icon({iconUrl:'/media/icones/succes2.png', className:'succes', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
-var Pano = L.icon({iconUrl:'/media/icones/pano2.png', className:'pano', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
-var Cordi = L.icon({iconUrl:'/media/icones/cordi.png', className:'cordi', iconSize:[30, 48], iconAnchor:[15, 48], popupAnchor:[0, -48]});
-var Cdelic = L.icon({iconUrl:'/media/icones/cdelic.png', className:'cdelic', iconSize:[30, 48], iconAnchor:[15, 48], popupAnchor:[0, -48]});
-var Cprec = L.icon({iconUrl:'/media/icones/cprec.png', className:'cprec', iconSize:[30, 48], iconAnchor:[15, 48], popupAnchor:[0, -48]});
-var Cluxe = L.icon({iconUrl:'/media/icones/cluxe.png', className:'cluxe', iconSize:[30, 48], iconAnchor:[15, 48], popupAnchor:[0, -48]});
-var Cdefi = L.icon({iconUrl:'/media/icones/cdefi.png', className:'cdefi', iconSize:[30, 48], iconAnchor:[15, 48], popupAnchor:[0, -48]});
-var Cfee = L.icon({iconUrl:'/media/icones/cfee.png', className:'cfee', iconSize:[30, 48], iconAnchor:[15, 48], popupAnchor:[0, -48]});
-var Cristal = L.icon({iconUrl:'/media/icones/cristal.png', className:'cristal', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
-var Electrocris = L.icon({iconUrl:'/media/icones/electrocris.png', className:'electrocris', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
-var Fbrume = L.icon({iconUrl:'/media/icones/fbrume.png', className:'fbrume', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
-var Ffeu = L.icon({iconUrl:'/media/icones/ffeu.png', className:'ffeu', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
-var Anemo = L.icon({iconUrl:'/media/icones/anemo2.png', className:'anemo', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
-var Ferblanc = L.icon({iconUrl:'/media/icones/ferblanc.png', className:'ferblanc', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
-var Eclatcm = L.icon({iconUrl:'/media/icones/eclatcm.png', className:'eclatcm', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
-var Halampe = L.icon({iconUrl:'/media/icones/halampe.png', className:'halampe', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
-var Chrysantheme = L.icon({iconUrl:'/media/icones/chrysantheme.png', className:'chrysantheme', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
-var Lyscalla = L.icon({iconUrl:'/media/icones/lyscalla.png', className:'lyscalla', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
-var Tombaie = L.icon({iconUrl:'/media/icones/tombaie.png', className:'tombaie', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
-var Bacrochet = L.icon({iconUrl:'/media/icones/bacrochet.png', className:'bacrochet', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
-var Pissenlit = L.icon({iconUrl:'/media/icones/pissenlit.png', className:'pissenlit', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
-var Cecilia = L.icon({iconUrl:'/media/icones/cecilia.png', className:'cecilia', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
-var Radis = L.icon({iconUrl:'/media/icones/radis.png', className:'radis', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
-var Carotte = L.icon({iconUrl:'/media/icones/carotte.png', className:'carotte', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
-var Pomme = L.icon({iconUrl:'/media/icones/pomme.png', className:'pomme', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
-var Grenouille = L.icon({iconUrl:'/media/icones/grenouille.png', className:'grenouille', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
-var Lezard = L.icon({iconUrl:'/media/icones/lezard.png', className:'lezard', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
-var Papillon = L.icon({iconUrl:'/media/icones/papillon.png', className:'papillon', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
-var Luciole = L.icon({iconUrl:'/media/icones/luciole.png', className:'luciole', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
-var Noyauc = L.icon({iconUrl:'/media/icones/noyauc.png', className:'noyauc', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
-var Credits = L.icon({iconUrl:'/media/icones/credits.png', className:'credits', iconSize:[52, 52], iconAnchor:[26, 26], popupAnchor:[0, -26]});
-var Alire = L.icon({iconUrl:'/media/icones/alire.png', className:'alire', iconSize:[64, 64], iconAnchor:[32, 32], popupAnchor:[0, -32]});
-var Null = L.icon({iconUrl:'/media/icones/null0.png', className:'null', iconSize:[2, 2], iconAnchor:[2, 3], popupAnchor:[-3, -3]});
+var Teleport = L.icon({iconUrl:'media/icones/teleport.png', className:'teleport', iconSize:[25, 40], iconAnchor:[12, 40], popupAnchor:[0, -40]});
+var Statue = L.icon({iconUrl:'media/icones/statue.png', className:'statue', iconSize:[25, 40], iconAnchor:[12, 40], popupAnchor:[0, -40]});
+var Succes = L.icon({iconUrl:'media/icones/succes2.png', className:'succes', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
+var Pano = L.icon({iconUrl:'media/icones/pano2.png', className:'pano', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
+var Cordi = L.icon({iconUrl:'media/icones/cordi.png', className:'cordi', iconSize:[30, 48], iconAnchor:[15, 48], popupAnchor:[0, -48]});
+var Cdelic = L.icon({iconUrl:'media/icones/cdelic.png', className:'cdelic', iconSize:[30, 48], iconAnchor:[15, 48], popupAnchor:[0, -48]});
+var Cprec = L.icon({iconUrl:'media/icones/cprec.png', className:'cprec', iconSize:[30, 48], iconAnchor:[15, 48], popupAnchor:[0, -48]});
+var Cluxe = L.icon({iconUrl:'media/icones/cluxe.png', className:'cluxe', iconSize:[30, 48], iconAnchor:[15, 48], popupAnchor:[0, -48]});
+var Cdefi = L.icon({iconUrl:'media/icones/cdefi.png', className:'cdefi', iconSize:[30, 48], iconAnchor:[15, 48], popupAnchor:[0, -48]});
+var Cfee = L.icon({iconUrl:'media/icones/cfee.png', className:'cfee', iconSize:[30, 48], iconAnchor:[15, 48], popupAnchor:[0, -48]});
+var Cristal = L.icon({iconUrl:'media/icones/cristal.png', className:'cristal', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
+var Electrocris = L.icon({iconUrl:'media/icones/electrocris.png', className:'electrocris', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
+var Fbrume = L.icon({iconUrl:'media/icones/fbrume.png', className:'fbrume', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
+var Ffeu = L.icon({iconUrl:'media/icones/ffeu.png', className:'ffeu', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
+var Anemo = L.icon({iconUrl:'media/icones/anemo2.png', className:'anemo', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
+var Ferblanc = L.icon({iconUrl:'media/icones/ferblanc.png', className:'ferblanc', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
+var Eclatcm = L.icon({iconUrl:'media/icones/eclatcm.png', className:'eclatcm', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
+var Halampe = L.icon({iconUrl:'media/icones/halampe.png', className:'halampe', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
+var Chrysantheme = L.icon({iconUrl:'media/icones/chrysantheme.png', className:'chrysantheme', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
+var Lyscalla = L.icon({iconUrl:'media/icones/lyscalla.png', className:'lyscalla', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
+var Tombaie = L.icon({iconUrl:'media/icones/tombaie.png', className:'tombaie', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
+var Bacrochet = L.icon({iconUrl:'media/icones/bacrochet.png', className:'bacrochet', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
+var Pissenlit = L.icon({iconUrl:'media/icones/pissenlit.png', className:'pissenlit', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
+var Cecilia = L.icon({iconUrl:'media/icones/cecilia.png', className:'cecilia', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
+var Radis = L.icon({iconUrl:'media/icones/radis.png', className:'radis', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
+var Carotte = L.icon({iconUrl:'media/icones/carotte.png', className:'carotte', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
+var Pomme = L.icon({iconUrl:'media/icones/pomme.png', className:'pomme', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
+var Grenouille = L.icon({iconUrl:'media/icones/grenouille.png', className:'grenouille', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
+var Lezard = L.icon({iconUrl:'media/icones/lezard.png', className:'lezard', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
+var Papillon = L.icon({iconUrl:'media/icones/papillon.png', className:'papillon', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
+var Luciole = L.icon({iconUrl:'media/icones/luciole.png', className:'luciole', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
+var Noyauc = L.icon({iconUrl:'media/icones/noyauc.png', className:'noyauc', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
+var Credits = L.icon({iconUrl:'media/icones/credits.png', className:'credits', iconSize:[52, 52], iconAnchor:[26, 26], popupAnchor:[0, -26]});
+var Alire = L.icon({iconUrl:'media/icones/alire.png', className:'alire', iconSize:[64, 64], iconAnchor:[32, 32], popupAnchor:[0, -32]});
+var Null = L.icon({iconUrl:'media/icones/null0.png', className:'null', iconSize:[2, 2], iconAnchor:[2, 3], popupAnchor:[-3, -3]});
 
 var popupOptions =
     {
