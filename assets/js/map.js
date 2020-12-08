@@ -10,6 +10,9 @@ $(window).load(function(){
     var liyuearray = ["cordil","cdelicl","cprecl","cluxel","cdefil","cfeel","succesl","geocul","panol"];
     var nbtmark = 0;
 
+    var _region = window.localStorage.getItem('region');
+    var REGION = (typeof _region !== 'undefined' && _region === 'mondstadt') ? _region : 'liuye';
+
 // Réglages de la LightBox ligne de commande : <a href="/media/test.jpg" data-lightbox="test1" data-title="Image de test"><img class="thumb" src="/media/test.jpg" width="230px" alt="Image de test"/></a>
     lightbox.option({
         'fadeDuration': 400,
@@ -308,7 +311,7 @@ $(window).load(function(){
                 $('.' + $(this).attr('value')).hide();
             }
         });
-        if (sessionStorage.region == "mondstadt") {
+        if (REGION === "mondstadt") {
             if (localStorage.MenumapgenshinMLi) {
                 var listatut = JSON.parse(localStorage.MenumapgenshinMLi);
             } else {
@@ -361,7 +364,8 @@ $(window).load(function(){
     });
 
     mymap.zoomControl.setPosition('topright')
-    if (sessionStorage.region == "mondstadt") {
+        console.log('REGION:', REGION);
+    if (REGION === "mondstadt") {
         mymap.setMaxBounds(new L.latLngBounds([-700,-200], [3025,4086]));
         var bounds = [[0,0], [2325,3886]];
         var image = L.imageOverlay('media/map-mondstadt.jpg', bounds).addTo(mymap);
@@ -451,7 +455,8 @@ $(window).load(function(){
 
         // Marqueurs par région
 
-    if (sessionStorage.region == "mondstadt") {
+    if (REGION === "mondstadt") {
+
         var markerspano = loadmarker(listpano,Pano,i18n.cat03,"pano","pano");
         initmarker (markerspano, "pano");
         var markerscordi = loadmarker(listcordi,Cordi,i18n.cat04,"oc","cordi");
@@ -524,8 +529,8 @@ $(window).load(function(){
         initmarker (markerssucces, "succesl");
         nbtmark += markerssucces.length;
         console.log(i18n["ui-succes"] + markerssucces.length + i18n["ui-load"]);
-    
-        localStorage.nbtliyue = nbtmark;            
+
+        localStorage.nbtliyue = nbtmark;
     };
     if (localStorage.nbtliyue) {
         nbtmark += Number(localStorage.nbtliyue);
@@ -586,7 +591,7 @@ $(window).load(function(){
                 listatut.push($(this).attr('value'));
             };
         });
-        if (sessionStorage.region = "mondstadt") {
+        if (REGION === "mondstadt") {
             localStorage.MenumapgenshinMLi = JSON.stringify(listatut);
         } else {
             localStorage.MenumapgenshinLLi = JSON.stringify(listatut);
@@ -610,7 +615,7 @@ $(window).load(function(){
                 btnstatut.push($(this).attr('value'));
             };
         });
-        if (sessionStorage.region = "mondstadt") {
+        if (REGION === "mondstadt") {
             localStorage.MenumapgenshinMBtn = JSON.stringify(btnstatut);
         } else {
             localStorage.MenumapgenshinLBtn = JSON.stringify(btnstatut);
@@ -627,18 +632,18 @@ $(window).load(function(){
 
     $('#BtnEnglish').on('click', function() {
         localStorage.asken = 1;
-        if (sessionStorage.region = "mondstadt") {
+        if (REGION === "mondstadt") {
             document.location.href='index.html';
         } else {
-            document.location.href='indexlen.html';
+            document.location.href='indexl.html';
         };
     });
 
     $('#BtnFrench').on('click', function() {
-        if (sessionStorage.region = "mondstadt") {
+        if (REGION === "mondstadt") {
             document.location.href='indexfr.html';
         } else {
-            document.location.href='indexl.html';
+            document.location.href='indexlfr.html';
         };
     });
 
@@ -663,14 +668,13 @@ $(window).load(function(){
         fr_.readAsText(this.files[0]);
     });
 
-    $('#btnmap').on('click', function () {
-        // document.location.href='anthol.html';
-        if (sessionStorage.languagemap == "fr") {
-            document.location.href='indexl.html';
-            } else {
-            document.location.href='indexlen.html';
-        };
-    });
+        $('#btnmap').on('click', function () {
+
+            var lang = (typeof(sessionStorage.languagemap) && sessionStorage.languagemap === 'fr') ? 'fr' : '';
+            var url = 'index' + ((REGION === 'mondstadt') ? 'l' : '') + lang + '.html';
+
+            return document.location.href = url;
+        });
 
     }); // Fin Fonction globale
 
