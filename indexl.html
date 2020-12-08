@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta http-equiv="content-language" content="fr" />
+	<meta http-equiv="content-language" content="en" />
 	<meta charset="utf-8">
 	<meta name="keywords" content="Map Interactive; Genshin Impact; coffre; Anemoculus; Geoculus; Statue of the 7; Mihoyo; RPG; Temple; Donjon; Exploration; Anémo; Dendro; Diluc; Électro; Archons élémentaire; combat système élémentaire; genshi; jeu genshi; jeu vidéo genshi; genshi impact; vidéo genshi; genshin; jeu genshin; jeu vidéo genshin; genshin impact 2020; amazon genshin impact; Android genshin impact; anime genshin impact; annonce genshin impact; genshin impact disponible; disponibilité genshin impact; genshin impact génial; sortie genshin impact; date de sortie genshin impact; genshin impact beta; bêta genshin impact; téléchargement genshin impact; jeu genshin impact; jeu vidéo genshin impact; genshin impact game; graphisme genshin impact; graphique genshin impact; introduction genshin impact; iPhone genshin impact; lancement genshin impact; genshin impact lance; manga genshin impact; mobile genshin impact; genshin impact officiel; genshin impact ouvert; ouverture genshin impact; PC genshin impact; PlayStation genshin impact; pré-inscription genshin impact; inscription genshin impact; aperçu genshin impact; test genshin impact; bêta test genshin impact; vidéo genshin impact; walkthrough genshin impact; genshin impact wiki; genshi; jeu genshi; jeu vidéo genshi; genshin impact; Hyrdo; Jean; Kaeya; Lisa; Port de Liyue; Paimon; jouer à genshin impact; héros; héroïne; Pyro; Razor; sept éléments; Teyvat; Venti; yuanshen game; mihoyo; mihoyo limited; miHoYo China; miHoYo Chine; miHoYo Japan; miHoYo Japon; histoire d&#x27;aventure; jeu monde ouvert; jeu vidéo monde ouvert; style anime; JRPG; MMORPG; jeux anime; jeu mobile; action RPG; jeu anime PS4; jeu multiplateforme; jeu vidéo multiplateforme; meilleur jeu mobile; asandbox adventure RPG; jeu mobile multijoueur; action jeu de rôle; action jeu vidéo de rôle;">
 	<meta name="description" content="Map Interactive Genshin Impact" />
 	<meta name="google-site-verification" content="bliVr8lt1OPhn3qLBDpT03pxeT5zdVY0xu12OmXtZis" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Map Interactive Genshin Impact - Liyue</title>
+	<title>Genshin Impact Interactive Map - Liyue</title>
 	<link rel="icon" href="media/icones/favicon.ico" />
 	<script type="text/javascript" src="assets/inc/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="assets/inc/leaflet.css">
@@ -21,7 +21,8 @@
 	<script type="text/javascript" src="assets/inc/lightbox-plus-jquery.min.js"></script>
 	<script type="text/javascript" src="assets/inc/cookie.min.js"></script>
 
-	<script type="text/javascript" src="assets/js/fr.min.js"></script>
+	<script type="text/javascript">window.localStorage.setItem("region","liyue");</script>
+	<script type="text/javascript" src="assets/js/en.min.js"></script>
 	<script type="text/javascript" src="assets/js/markers-liyue.min.js"></script>
 	<script type="text/javascript" src="assets/js/map.min.js"></script>
 
@@ -77,33 +78,33 @@
 	</div>
 -->
 	<div id="menuhaut" style="text-decoration: none;">
-		<div id="btnmenu"><a id="BtnEnglish" title="English version"><img src="media/icones/english64.png" alt="English version" width="48px"/></a><a id="BtnReset" title="Reset des Marqueurs"><img src="media/icones/reset64.png" alt="Reset des Marqueurs" width="48px"></a><a href="" id="BtnExport" title="Sauvegarde des Marqueurs" download="GenshinMapMarker.txt"><img src="media/icones/export64.png" alt="Sauvegarde des Marqueurs" width="48px"></a><a href="#" id="BtnImport" title="Chargement des Marqueurs"><img src="media/icones/import64.png" alt="Chargement des Marqueurs" width="48px"></a><input type="file" id="ImportBox" accept=".txt" style="display:none"></div>
-		<div id="banniere"><img src="media/banniere.jpg" /><a style="vertical-align: 100%;"> Map Genshin Impact by TMKFrench </a></div>
+		<div id="btnmenu"><a id="BtnFrench" title="French version"><img src="media/icones/french64.png" alt="French version" width="48px" /><a id="BtnReset" title="Reset Markers"><img src="media/icones/reset64.png" alt="Reset Markers" width="48px"></a><a href="" id="BtnExport" title="Export Markers" download="GenshinMapMarker.txt"><img src="media/icones/export64.png" alt="Export Markers" width="48px"></a><a href="#" id="BtnImport" title="Import Markers"><img src="media/icones/import64.png" alt="Import Markers" width="48px"></a><input type="file" id="ImportBox" accept=".txt" style="display:none"></div>
+		<div id="banniere"><img src="media/banniere.jpg" /><a style="vertical-align: 100%;"> Genshin Impact Map by TMKFrench </a></div>
 	</div>
 	<div id="mapid" class="leaflet-container leaflet-fade-anim" tabindex="0"></div>
 	<div id="activation-select">
-			<div id="activation-select-box" value="-1">Liste des Marqueurs</div>
-				<ul id="activation-select-options">
-					<li class="section" style="border-radius: 5px 5px 0 0;">EXPLORATION</li>
-					<li id="listatue" value="statue"><img src="media/icones/statue.png" /> Statues des 7</li>
-					<li id="liteleport" value="teleport"><img src="media/icones/teleport.png" /> Téléporteurs</li>
-					<li id="lisucces" value="succes" class="selected"><img src="media/icones/succes.png" /> Succés</li>
-					<li id="lipano" value="pano" class="selected"><img src="media/icones/pano.png" /> Panorama</li>
+			<div id="activation-select-box" value="-1">Marker's Type</div>
+                <ul id="activation-select-options">
+                    <li class="section" style="border-radius: 5px 5px 0 0;">EXPLORATION</li>
+                    <li id="listatue" value="statue"><img src="media/icones/statue.png" /> Statues of 7</li>
+                    <li id="liteleport" value="teleport"><img src="media/icones/teleport.png" /> Teleports</li>
+                    <li id="lisucces" value="succes" class="selected"><img src="media/icones/succes.png" /> Achievements</li>
+                    <li id="lipano" value="pano" class="selected"><img src="media/icones/pano.png" /> Viewpoint</li>
 					<li id="ligeocul" value="geocul" class="selected"><img src="media/icones/geocul.png" /> Geoculus</li>
-					<li class="section">COFFRES</li>
-					<li class="selectbtn"><a title="Coffres Ordinaires"><img id="btncordi" class="matbtn pressed" value="cordi" src="media/icones/cordioff.png"/></a> <a title="Coffres Délicats"><img id="btncdelic" class="matbtn pressed" value="cdelic" src="media/icones/cdelicoff.png"/></a> <a title="Coffres Précieux"><img id="btncprec" class="matbtn pressed" value="cprec" src="media/icones/cprecoff.png"/></a> <a title="Coffres Luxueux"><img id="btncluxe" class="matbtn pressed" value="cluxe" src="media/icones/cluxeoff.png"/></a></li>
-					<li class="selectbtn"><a title="Coffres Défi"><img id="btncdefi" class="matbtn pressed" value="cdefi" src="media/icones/cdefioff.png"/></a> <a title="Coffres des Fées"><img id="btncfee" class="matbtn pressed" value="cfee" src="media/icones/cfeeoff.png"/></a></li>
-					<li class="section">MATERIAUX</li>
-					<li class="selectbtn"><a title="Fer Blanc"><img id="btnferblanc" class="matbtn pressed" value="ferblanc" src="media/icones/ferblancoff.png"/></a> <a title="Cristal"><img id="btncristal" class="matbtn pressed" value="cristal" src="media/icones/cristalcoff.png"/></a> <a title="Electro Cristal"><img id="btnelectrocris" class="matbtn pressed" value="electrocris" src="media/icones/electrocrisoff.png"/></a> <a title="Coeur de Lapis"><img id="btnlapis" class="matbtn pressed" value="lapis" src="media/icones/lapisoff.png"/></a></li>
-					<li class="selectbtn"><a title="Jade Noctiluque"><img id="btnjade" class="matbtn pressed" value="jade" src="media/icones/jadeoff.png"/></a> <a title="Conques d'Etoiles"><img id="btnconque" class="matbtn pressed" value="conque" src="media/icones/conqueoff.png"/></a> <a title="Perles de Loche"><img id="btnperle" class="matbtn pressed" value="perle" src="media/icones/perleoff.png"/></a> <a title="Sceaux Geo"><img id="btnsceaugeo" class="matbtn pressed" value="sceaugeo" src="media/icones/sceaugeooff.png"/></a></li>
-					<li class="selectbtn"><a title="Qingxin"><img id="btnqingxin" class="matbtn pressed" value="qingxin" src="media/icones/qingxinoff.png"/></a> <a title="Muguet Bleu"><img id="btnmuguet" class="matbtn pressed" value="muguet" src="media/icones/muguetoff.png"/></a> <a title="Piment de Jueyun"><img id="btnpiment" class="matbtn pressed" value="piment" src="media/icones/pimentoff.png"/></a> <a title="Lys Vernis"><img id="btnlysverni" class="matbtn pressed" value="lysverni" src="media/icones/lysvernioff.png"/></a></li>
-					<li class="selectbtn"><a title="Fleurs de Soie"><img id="btnfsoie" class="matbtn pressed" value="fsoie" src="media/icones/fsoieoff.png"/></a> <a title="Fleurs de Brume"><img id="btnfbrume" class="matbtn pressed" value="fbrume" src="media/icones/fbrumeoff.png"/></a> <a title="Fleurs de Feu"><img id="btnffeu" class="matbtn pressed" value="ffeu" src="media/icones/ffeuoff.png"/></a> <a title="Radis"><img id="btnradis" class="matbtn pressed" value="radis" src="media/icones/radisoff.png"/></a></li>
-					<li class="selectbtn"><a title="Carottes"><img id="btncarotte" class="matbtn pressed" value="carotte" src="media/icones/carotteoff.png"/></a> <a title="Pommes"><img id="btnpomme" class="matbtn pressed" value="pomme" src="media/icones/pommeoff.png"/></a> <a title="Pousses de Bambou"><img id="btnbambou" class="matbtn pressed" value="bambou" src="media/icones/bambouoff.png"/></a> <a title="Fruits du Lotus"><img id="btnlotus" class="matbtn pressed" value="lotus" src="media/icones/lotusoff.png"/></a></li>
-					<li class="selectbtn"><a title="Grenouilles"><img id="btngrenouille" class="matbtn pressed" value="grenouille" src="media/icones/grenouilleoff.png"/></a> <a title="Lézards"><img id="btnlezard" class="matbtn pressed" value="lezard" src="media/icones/lezardoff.png"/></a> <a title="Ailes de Papillon"><img id="btnpapillon" class="matbtn pressed" value="papillon" src="media/icones/papillonoff.png"/></a> <a title="Abdomens Luminescents"><img id="btnluciole" class="matbtn pressed" value="luciole" src="media/icones/lucioleoff.png"/></a></li>
-					<li class="selectbtn"><a title="Noyaux Cristallins"><img id="btnnoyauc" class="matbtn pressed" value="noyauc" src="media/icones/noyaucoff.png"/></a></li>
+                    <li class="section">CHESTS</li>
+                    <li class="selectbtn"><a title="Common Chests"><img id="btncordi" class="matbtn pressed" value="cordi" src="media/icones/cordioff.png"/></a> <a title="Exquisite Chests"><img id="btncdelic" class="matbtn pressed" value="cdelic" src="media/icones/cdelicoff.png"/></a> <a title="Precious Chests"><img id="btncprec" class="matbtn pressed" value="cprec" src="media/icones/cprecoff.png"/></a> <a title="Luxurious Chests"><img id="btncluxe" class="matbtn pressed" value="cluxe" src="media/icones/cluxeoff.png"/></a></li>
+                    <li class="selectbtn"><a title="Challenge Chests"><img id="btncdefi" class="matbtn pressed" value="cdefi" src="media/icones/cdefioff.png"/></a> <a title="Seelies Chests"><img id="btncfee" class="matbtn pressed" value="cfee" src="media/icones/cfeeoff.png"/></a></li>
+                    <li class="section">MATERIALS</li>
+					<li class="selectbtn"><a title="White Iron"><img id="btnferblanc" class="matbtn pressed" value="ferblanc" src="media/icones/ferblancoff.png"/></a> <a title="Crystal"><img id="btncristal" class="matbtn pressed" value="cristal" src="media/icones/cristalcoff.png"/></a> <a title="Electro Crystal"><img id="btnelectrocris" class="matbtn pressed" value="electrocris" src="media/icones/electrocrisoff.png"/></a> <a title="Cor Lapis"><img id="btnlapis" class="matbtn pressed" value="lapis" src="media/icones/lapisoff.png"/></a></li>
+					<li class="selectbtn"><a title="Noctilucous Jade"><img id="btnjade" class="matbtn pressed" value="jade" src="media/icones/jadeoff.png"/></a> <a title="Starconch"><img id="btnconque" class="matbtn pressed" value="conque" src="media/icones/conqueoff.png"/></a> <a title="Loach Pearl"><img id="btnperle" class="matbtn pressed" value="perle" src="media/icones/perleoff.png"/></a> <a title="Geo Sigil"><img id="btnsceaugeo" class="matbtn pressed" value="sceaugeo" src="media/icones/sceaugeooff.png"/></a></li>
+					<li class="selectbtn"><a title="Qingxin"><img id="btnqingxin" class="matbtn pressed" value="qingxin" src="media/icones/qingxinoff.png"/></a> <a title="Violet grass"><img id="btnmuguet" class="matbtn pressed" value="muguet" src="media/icones/muguetoff.png"/></a> <a title="Jueyun Chili"><img id="btnpiment" class="matbtn pressed" value="piment" src="media/icones/pimentoff.png"/></a> <a title="Glaze Lily"><img id="btnlysverni" class="matbtn pressed" value="lysverni" src="media/icones/lysvernioff.png"/></a></li>
+					<li class="selectbtn"><a title="Silk Flowers"><img id="btnfsoie" class="matbtn pressed" value="fsoie" src="media/icones/fsoieoff.png"/></a> <a title="Mist Flowers"><img id="btnfbrume" class="matbtn pressed" value="fbrume" src="media/icones/fbrumeoff.png"/></a> <a title="Flaming Flowers"><img id="btnffeu" class="matbtn pressed" value="ffeu" src="media/icones/ffeuoff.png"/></a> <a title="Radish"><img id="btnradis" class="matbtn pressed" value="radis" src="media/icones/radisoff.png"/></a></li>
+					<li class="selectbtn"><a title="Carrots"><img id="btncarotte" class="matbtn pressed" value="carotte" src="media/icones/carotteoff.png"/></a> <a title="Apples"><img id="btnpomme" class="matbtn pressed" value="pomme" src="media/icones/pommeoff.png"/></a> <a title="Bamboo Shoots"><img id="btnbambou" class="matbtn pressed" value="bambou" src="media/icones/bambouoff.png"/></a> <a title="Lotus Heads"><img id="btnlotus" class="matbtn pressed" value="lotus" src="media/icones/lotusoff.png"/></a></li>
+                    <li class="selectbtn"><a title="Frogs"><img id="btngrenouille" class="matbtn pressed" value="grenouille" src="media/icones/grenouilleoff.png"/></a> <a title="Lizards"><img id="btnlezard" class="matbtn pressed" value="lezard" src="media/icones/lezardoff.png"/></a> <a title="Butterfly Wing"><img id="btnpapillon" class="matbtn pressed" value="papillon" src="media/icones/papillonoff.png"/></a> <a title="Luminescent Spine"><img id="btnluciole" class="matbtn pressed" value="luciole" src="media/icones/lucioleoff.png"/></a></li>
+					<li class="selectbtn"><a title="Crystal Core"><img id="btnnoyauc" class="matbtn pressed" value="noyauc" src="media/icones/noyaucoff.png"/></a></li>
 				</ul>
 	</div>
-	<div id="btnmap"><h1>Map de Mondstadt</h1></div>
+	<div id="btnmap"><h1>Map of Mondstadt</h1></div>
 
 </body>
 
