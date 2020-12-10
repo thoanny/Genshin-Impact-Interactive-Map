@@ -246,11 +246,11 @@ $(window).load(function(){
     function resetmarkers() {
         doreset();
         alert(i18n["ui-reset"]);
-        if (sessionStorage.languagemap == "fr") {
-        document.location.href='indexfr.html';
-        } else {
-        document.location.href='index.html';}
-    };
+        var lang = (typeof(sessionStorage.languagemap) && sessionStorage.languagemap === 'fr') ? 'fr' : '';
+        var url = 'index' + ((REGION === 'mondstadt') ? '' : 'l') + lang + '.html';
+
+        return document.location.href = url;
+};
 
     function doreset () {
         var  i=0, cbx;
@@ -290,12 +290,11 @@ $(window).load(function(){
                 i = i + 2;
             };
             alert(i18n["ui-import"]);
-            if (sessionStorage.languagemap == "fr") {
-                document.location.href='indexfr.html';
-                } else {
-                document.location.href='index.html';
-                };
-            } else {
+            var lang = (typeof(sessionStorage.languagemap) && sessionStorage.languagemap === 'fr') ? 'fr' : '';
+            var url = 'index' + ((REGION === 'mondstadt') ? '' : 'l') + lang + '.html';
+    
+            return document.location.href = url;
+        } else {
             alert(i18n["ui-fileerror"]);
         };
     };
@@ -669,13 +668,13 @@ $(window).load(function(){
         fr_.readAsText(this.files[0]);
     });
 
-        $('#btnmap').on('click', function () {
+    $('#btnmap').on('click', function () {
 
-            var lang = (typeof(sessionStorage.languagemap) && sessionStorage.languagemap === 'fr') ? 'fr' : '';
-            var url = 'index' + ((REGION === 'mondstadt') ? 'l' : '') + lang + '.html';
+        var lang = (typeof(sessionStorage.languagemap) && sessionStorage.languagemap === 'fr') ? 'fr' : '';
+        var url = 'index' + ((REGION === 'mondstadt') ? 'l' : '') + lang + '.html';
 
-            return document.location.href = url;
-        });
+        return document.location.href = url;
+    });
 
     }); // Fin Fonction globale
 
