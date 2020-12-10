@@ -39,6 +39,7 @@ var Papillon = L.icon({iconUrl:'media/icones/papillon.png', className:'papillon'
 var Luciole = L.icon({iconUrl:'media/icones/luciole.png', className:'luciole', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
 var Noyauc = L.icon({iconUrl:'media/icones/noyauc.png', className:'noyauc', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
 var Gdloup = L.icon({iconUrl:'media/icones/gdloup.png', className:'gdloup', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
+var Eclatcm = L.icon({iconUrl:'media/icones/eclatcm.png', className:'eclatcm', iconSize:[30, 30], iconAnchor:[15, 15], popupAnchor:[0, -15]});
 var Credits = L.icon({iconUrl:'media/icones/credits.png', className:'credits', iconSize:[52, 52], iconAnchor:[26, 26], popupAnchor:[0, -26]});
 var Alire = L.icon({iconUrl:'media/icones/alire.png', className:'alire', iconSize:[64, 64], iconAnchor:[32, 32], popupAnchor:[0, -32]});
 var Null = L.icon({iconUrl:'media/icones/null0.png', className:'null', iconSize:[2, 2], iconAnchor:[2, 3], popupAnchor:[-3, -3]});	
@@ -113,7 +114,7 @@ var popupOptions =
 		[1,[ 999,1736]],[3,[2678, 873],i18n.com055],[3,[2664,1005],i18n.com055],[3,[2580, 822],i18n.com003],[3,[2628, 837],i18n.com055],[3,[2507, 886],i18n.com003],[3,[2358,1017],i18n.com003],[3,[3139,1767],i18n.com003],[3,[2042,1965],i18n.com003],[3,[1967,1991],i18n.com003],
 		[3,[1924,1887],i18n.com003],[3,[1899,1911],i18n.com021],[3,[2414, 654],i18n.com003],[3,[1708,1704],i18n.com003],[3,[1273,3227],i18n.com072],[3,[2377, 651],i18n.com021],[3,[1944, 561],i18n.com003],[3,[2154, 301],i18n.com073],[3,[2049, 338],i18n.com003],[3,[2762,1865],i18n.com003],
 		[3,[2803,1911],i18n.com074],[3,[2142,2439],i18n.com007],[3,[2197, 637],i18n.com021],[7,[2072, 741],"W5Tgk3rhooo",i18n.com057],[3,[2152, 731],i18n.com021],[3,[2210, 730],i18n.com055],[7,[2406,2435],"6-A9RgDnB7A",i18n.com086],[3,[2162,2656],i18n.com003],[3,[2086,2677],i18n.com003],[3,[2055,2694],i18n.com021],
-		[3,[2028,2654],i18n.com087],[3,[1193,1478],i18n.com021],,[3,[1986,1280],i18n.com087],[3,[2539,1484],i18n.com003]
+		[3,[2028,2654],i18n.com087],[3,[1193,1478],i18n.com021],[3,[1986,1280],i18n.com087],[3,[2539,1484],i18n.com003]
     ];
 
 // Coffres Précieux
@@ -351,4 +352,10 @@ var popupOptions =
 
 var listgdloup = [
 	[12,[2046, 991]]
+];
+
+// Eclat de cristal magique
+
+var listeclatcm = [
+	[12,[ 575, 930]],[12,[1183,3042]],[12,[1119,2965]],[12,[ 997,3022]],[12,[ 909,1620]]
 ];
