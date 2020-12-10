@@ -11,7 +11,7 @@ $(window).load(function(){
     var nbtmark = 0;
 
     var _region = window.localStorage.getItem('region');
-    var REGION = (typeof _region !== 'undefined' && _region === 'mondstadt') ? _region : 'liuye';
+    var REGION = (typeof _region !== 'undefined' && _region === 'mondstadt') ? _region : 'liyue';
 
 // Réglages de la LightBox ligne de commande : <a href="/media/test.jpg" data-lightbox="test1" data-title="Image de test"><img class="thumb" src="/media/test.jpg" width="230px" alt="Image de test"/></a>
     lightbox.option({
