@@ -443,6 +443,7 @@ $(window).load(function(){
     loadmarker(listelectroc,Electrocris,i18n.cat12,"","");
     loadmarker(listfbrume,Fbrume,i18n.cat13,"","");
     loadmarker(listffeu,Ffeu,i18n.cat14,"","");
+    loadmarker(listgdloup,Gdloup,i18n.cat45,"","");
     loadmarker(listpomme,Pomme,i18n.cat15,"","");
     loadmarker(listcarotte,Carotte,i18n.cat16,"","");
     loadmarker(listradis,Radis,i18n.cat17,"","");
@@ -452,6 +453,7 @@ $(window).load(function(){
     loadmarker(listpapillon,Papillon,i18n.cat42,"","");
     loadmarker(listluciole,Luciole,i18n.cat43,"","");
     loadmarker(listnoyauc,Noyauc,i18n.cat44,"","");
+    loadmarker(listeclatcm,Eclatcm,i18n.cat26,"","");
 
         // Marqueurs par région
 
@@ -480,7 +482,6 @@ $(window).load(function(){
         loadmarker(listlyscalla,Lyscalla,i18n.cat22,"","");
         loadmarker(listcecilia,Cecilia,i18n.cat23,"","");
         loadmarker(listbacrochet,Bacrochet,i18n.cat24,"","");
-        loadmarker(listeclatcm,Eclatcm,i18n.cat26,"","");
     	var markerssucces = [
             L.marker([1378,1754], {icon: Succes, title: i18n['succes-001-title']}).addTo(mymap).on('click', onMarkerClick).bindPopup('<iframe width="560" height="315" src="//www.youtube.com/embed/gi8SNBMgcJQ?rel=0" frameborder="0" allowfullscreen></iframe><h1>'+i18n['succes-001-h1']+'</h1><h2><label><input id="mapbox" name="succes" value="1" type="checkbox" /> '+i18n['ui-found']+'</label></h2>', popupOptions),
             L.marker([1831,2791], {icon: Succes, title: i18n['succes-002-title']}).addTo(mymap).on('click', onMarkerClick).bindPopup('<iframe width="560" height="315" src="//www.youtube.com/embed/zWyh1IzC9p4?rel=0" frameborder="0" allowfullscreen></iframe><h1>'+i18n['succes-002-h1']+'</h1><h2><label><input id="mapbox" name="succes" value="2" type="checkbox" /> '+i18n['ui-found']+'</label></h2>', popupOptions),

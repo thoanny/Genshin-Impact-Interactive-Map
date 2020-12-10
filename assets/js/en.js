@@ -58,7 +58,7 @@ var i18n = {
     'cat42': 'Butterfly Wings',
     'cat43': 'Luminescent Spines',
     'cat44': 'Crystal Cores',
-
+    'cat45': 'Gueule de loup',
 
     // Succès
     'succes-001-title': 'Beloved of the Anemo Archon',
@@ -175,7 +175,7 @@ var i18n = {
     'com065': 'Kill all 3 blobs to unlock the chest',
     'com066': 'Kill all enemies to reveal the chest',
     'com067': 'Kill the Eye of the Storm to reveal the chest',
-    'com068': 'Light the 3 torches to reveal the chest',
+    'com068': 'Ignite the 3 torches to reveal the chest',
     'com069': 'Activate the totem with a <a style="color:deepskyblue;">CRYO</a> type attack<br>to make the chest appear',
     'com070': 'Quickly activate the 3 totems with a <a style="color:red;">PYRO</a> attack<br>to make the chest appear',
     'com071': 'Break the walls then the crystals and bring back a star <br> each lantern with a GEO or ELECTRO character',
@@ -194,5 +194,7 @@ var i18n = {
     'com084': 'Activate the fan with an<a style=\"color:turquoise;\"> ANEMO </a>attack<br>to fly away and recover the geoculus',
     'com085': 'Create a base with the<a style=\"color:darkorange;\"> GEO </a>attack of the traveler<br>to reach the Geoculus',
     'com086': 'Enter the cave then swim to the chest',
-    'com087': 'Ignite the 4 torches to unlock the chest'
+    'com087': 'Ignite the 4 torches to unlock the chest',
+    'com088': 'Break the crystal and bring back the star<br>to the lantern to reveal the chest',
+    'com089': 'Kill Dendro Blobs group to reveal the chest'
 };
