@@ -59,6 +59,7 @@ var i18n = {
     'cat42': 'Ailes de Papillon',
     'cat43': 'Abdomens Luminescents',
     'cat44': 'Noyaux Cristallins',
+    'cat45': 'Gueule de Loup',
 
     // Succès
     'succes-001-title': 'Chouchou de l\'Archon Anemo',
@@ -194,5 +195,7 @@ var i18n = {
     'com084': 'Activez le ventilateur avec une attaque type <a style="color:turquoise;">ANEMO</a><br>pour vous envoler et récupérer le geoculus',
     'com085': 'Créez un socle avec l\'attaque <a style="color:darkorange;">GEO</a> du voyageur<br>pour atteindre le Geoculus',
     'com086': 'Rentrez dans la grotte puis nagez jusqu\'au coffre',
-    'com087': 'Enflammer les 4 torches pour déverrouiller le coffre'
+    'com087': 'Enflammer les 4 torches pour déverrouiller le coffre',
+    'com088': 'Casser le cristal et ramenez l\'étoile<br>à la lanterne pour faire apparaitre le coffre',
+    'com089': 'Tuer le groupe de Blobs Dendro pour<br>faire apparaitre le coffre'
 };

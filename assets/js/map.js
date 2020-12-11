@@ -11,7 +11,7 @@ $(window).load(function(){
     var nbtmark = 0;
 
     var _region = window.localStorage.getItem('region');
-    var REGION = (typeof _region !== 'undefined' && _region === 'mondstadt') ? _region : 'liuye';
+    var REGION = (typeof _region !== 'undefined' && _region === 'mondstadt') ? _region : 'liyue';
 
 // Réglages de la LightBox ligne de commande : <a href="/media/test.jpg" data-lightbox="test1" data-title="Image de test"><img class="thumb" src="/media/test.jpg" width="230px" alt="Image de test"/></a>
     lightbox.option({
@@ -246,11 +246,11 @@ $(window).load(function(){
     function resetmarkers() {
         doreset();
         alert(i18n["ui-reset"]);
-        if (sessionStorage.languagemap == "fr") {
-        document.location.href='indexfr.html';
-        } else {
-        document.location.href='index.html';}
-    };
+        var lang = (typeof(sessionStorage.languagemap) && sessionStorage.languagemap === 'fr') ? 'fr' : '';
+        var url = 'index' + ((REGION === 'mondstadt') ? '' : 'l') + lang + '.html';
+
+        return document.location.href = url;
+};
 
     function doreset () {
         var  i=0, cbx;
@@ -290,12 +290,11 @@ $(window).load(function(){
                 i = i + 2;
             };
             alert(i18n["ui-import"]);
-            if (sessionStorage.languagemap == "fr") {
-                document.location.href='indexfr.html';
-                } else {
-                document.location.href='index.html';
-                };
-            } else {
+            var lang = (typeof(sessionStorage.languagemap) && sessionStorage.languagemap === 'fr') ? 'fr' : '';
+            var url = 'index' + ((REGION === 'mondstadt') ? '' : 'l') + lang + '.html';
+    
+            return document.location.href = url;
+        } else {
             alert(i18n["ui-fileerror"]);
         };
     };
@@ -443,6 +442,7 @@ $(window).load(function(){
     loadmarker(listelectroc,Electrocris,i18n.cat12,"","");
     loadmarker(listfbrume,Fbrume,i18n.cat13,"","");
     loadmarker(listffeu,Ffeu,i18n.cat14,"","");
+    loadmarker(listgdloup,Gdloup,i18n.cat45,"","");
     loadmarker(listpomme,Pomme,i18n.cat15,"","");
     loadmarker(listcarotte,Carotte,i18n.cat16,"","");
     loadmarker(listradis,Radis,i18n.cat17,"","");
@@ -452,6 +452,7 @@ $(window).load(function(){
     loadmarker(listpapillon,Papillon,i18n.cat42,"","");
     loadmarker(listluciole,Luciole,i18n.cat43,"","");
     loadmarker(listnoyauc,Noyauc,i18n.cat44,"","");
+    loadmarker(listeclatcm,Eclatcm,i18n.cat26,"","");
 
         // Marqueurs par région
 
@@ -480,7 +481,6 @@ $(window).load(function(){
         loadmarker(listlyscalla,Lyscalla,i18n.cat22,"","");
         loadmarker(listcecilia,Cecilia,i18n.cat23,"","");
         loadmarker(listbacrochet,Bacrochet,i18n.cat24,"","");
-        loadmarker(listeclatcm,Eclatcm,i18n.cat26,"","");
     	var markerssucces = [
             L.marker([1378,1754], {icon: Succes, title: i18n['succes-001-title']}).addTo(mymap).on('click', onMarkerClick).bindPopup('<iframe width="560" height="315" src="//www.youtube.com/embed/gi8SNBMgcJQ?rel=0" frameborder="0" allowfullscreen></iframe><h1>'+i18n['succes-001-h1']+'</h1><h2><label><input id="mapbox" name="succes" value="1" type="checkbox" /> '+i18n['ui-found']+'</label></h2>', popupOptions),
             L.marker([1831,2791], {icon: Succes, title: i18n['succes-002-title']}).addTo(mymap).on('click', onMarkerClick).bindPopup('<iframe width="560" height="315" src="//www.youtube.com/embed/zWyh1IzC9p4?rel=0" frameborder="0" allowfullscreen></iframe><h1>'+i18n['succes-002-h1']+'</h1><h2><label><input id="mapbox" name="succes" value="2" type="checkbox" /> '+i18n['ui-found']+'</label></h2>', popupOptions),
@@ -668,13 +668,13 @@ $(window).load(function(){
         fr_.readAsText(this.files[0]);
     });
 
-        $('#btnmap').on('click', function () {
+    $('#btnmap').on('click', function () {
 
-            var lang = (typeof(sessionStorage.languagemap) && sessionStorage.languagemap === 'fr') ? 'fr' : '';
-            var url = 'index' + ((REGION === 'mondstadt') ? 'l' : '') + lang + '.html';
+        var lang = (typeof(sessionStorage.languagemap) && sessionStorage.languagemap === 'fr') ? 'fr' : '';
+        var url = 'index' + ((REGION === 'mondstadt') ? 'l' : '') + lang + '.html';
 
-            return document.location.href = url;
-        });
+        return document.location.href = url;
+    });
 
     }); // Fin Fonction globale
 
